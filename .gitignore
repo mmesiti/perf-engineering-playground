@@ -1,0 +1,7 @@
+scorep-20*
+gmon.out
+*perf.data*
+callgraph-test
+callgraph-test*
+
+gprof-busy
