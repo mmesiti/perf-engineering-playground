@@ -3,5 +3,6 @@ gmon.out
 *perf.data*
 callgraph-test
 callgraph-test*
+!callgraph-test.c
 
 gprof-busy

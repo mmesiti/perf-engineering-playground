@@ -1,3 +1,6 @@
+# Note: $@ is the output of the rule
+#       $< is the first input of the rule
+
 callgraph-test-sleep-scorep: callgraph-test.c 
 	scorep gcc -DACTIVITY=sleep -o $@ $<
 
@@ -26,3 +29,6 @@ busy.perf.data: callgraph-test-busy Makefile
 sleep.perf.data: callgraph-test-sleep
 	perf record --call-graph=fp ./$<
 	mv perf.data sleep.perf.data
+
+clean:
+	rm -rf scorep-20* sleep.perf.data busy.perf.data callgraph-test-* gprof-busy gmon.out
